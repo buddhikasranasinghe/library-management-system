@@ -1,0 +1,110 @@
+
+tables of library system
++-------------------------------+
+| Tables_in_lib_system  |
++-------------------------------+
+| all_books                      |
+| available_books           |
+| fine_table                     |
+| fine_values                  |
+| issure_books               |
+| login                             |
+| student_details            |
+| temporary_user           |
++------------------------------+
+
+table all_books
++----------------+----------------+-------+-------+---------+-------+
+| Field           | Type           | Null  | Key  | Default | Extra |
++---------------+-----------------+-------+-------+---------+-------+
+| b_id            | varchar(10) | NO   | PRI | NULL    |       |
+| b_category | varchar(20) | YES  |       | NULL    |       |
+| b_name      | varchar(50) | YES  |      | NULL    |       |
+| a_name      | varchar(50) | YES  |      | NULL    |       |
+| b_issure     | varchar(5)    | YES  |     | NULL    |       |
+| b_floor        | varchar(10) | YES  |      | NULL    |       |
+| b_rack        | varchar(10) | YES  |      | NULL    |       |
++---------------+-----------------+-------+-----+---------+-------+
+
+table available_books
++------------+-------------+------+-----+---------+-------+
+| Field           | Type              | Null  | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| b_id            | varchar(10)   | NO    | PRI | NULL    |       |
+| b_category | varchar(20)   | YES  |        | NULL    |       |
+| b_name      | varchar(50)   | YES  |        | NULL    |       |
+| a_name      | varchar(50)   | YES  |        | NULL    |       |
+| b_issure     | varchar(5)     | YES  |        | NULL    |       |
+| b_floor        | varchar(10)   | YES  |        | NULL    |       |
+| b_rack        | varchar(10)   | YES  |        | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+
+table fine_table
++---------+---------+------+-----+---------+-------+
+| Field       | Type      | Null   | Key | Default | Extra |
++---------+---------+------+-----+---------+-------+
+| s_index  | int(25)    | NO    | PRI | NULL    |       |
+| fine         | double   | YES  |        | NULL    |       |
++---------+---------+------+-----+---------+-------+
+
+table fine_values
++---------+--------+------+-----+---------+-------+
+| Field   | Type   | Null   | Key | Default | Extra |
++---------+--------+------+-----+---------+-------+
+| fine_id | int(3) | NO     | PRI | NULL    |       |
+| value   | float   | YES  |         | NULL    |       |
++---------+--------+------+-----+---------+-------+
+
+table issure_books
++-------------+-------------+------+-----+---------+-------+
+| Field             | Type             | Null   | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| b_id             | varchar(10)   | NO    | PRI | NULL    |       |
+| s_id             | varchar(10)   | YES  |        | NULL    |       |
+| issure_date | date              | YES  |        | NULL    |       |
+| duration       | varchar(10)  | YES  |        | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+
+table login
++--------------------+--------------+------+-----+---------+-------+
+| Field                         | Type              | Null | Key | Default | Extra |
++--------------------+--------------+------+-----+---------+-------+
+| id                              | int(11)            | NO   | PRI | NULL    |       |
+| full_name                 | varchar(100)  | YES  |       | NULL    |       |
+| name_with_initials   | varchar(100)  | YES  |       | NULL    |       |
+| nic                            | varchar(20)   | YES  |        | NULL    |       |
+| email                        | varchar(75)   | YES  |       | NULL    |       |
+| address                    | varchar(100) | YES  |       | NULL    |       |
+| gender                      | varchar(10)  | YES  |        | NULL    |       |
+| mobile_one              | varchar(10)   | YES  |        | NULL    |       |
+| mobile_two              | varchar(10)   | YES  |       | NULL    |       |
+| u_name                   | varchar(100) | YES  |        | NULL    |       |
+| password                | varchar(20)    | YES  |       | NULL    |       |
++--------------------+--------------+------+-----+---------+-------+
+
+table student_details
++--------------+--------------+------+-----+---------+-------+
+| Field                 | Type               | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| s_index             | int(25)            | NO   | PRI | NULL    |       |
+| s_name             | varchar(100) | YES  |        | NULL    |       |
+| s_short_name   | varchar(50)   | YES  |        | NULL    |       |
+| s_address         | varchar(50)   | YES  |        | NULL    |       |
+| s_thome            | varchar(10)   | YES  |        | NULL    |       |
+| s_tmobile          | varchar(10)   | YES  |        | NULL    |       |
+| s_email             | varchar(50)   | YES  |        | NULL    |       |
+| s_gender          | varchar(10)   | YES  |         | NULL    |       |
+| guardian           | varchar(20)  | YES  |          | NULL    |       |
+| g_name            | varchar(50)  | YES  |          | NULL    |       |
+| g_address        | varchar(50)  | YES  |          | NULL    |       |
+| g_mobile_one  | varchar(10)  | YES  |          | NULL    |       |
+| g_mobile_two   | varchar(10)  | YES  |         | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+
+table temporary_user  
++-----------+-------------+------+-----+---------+-------+
+| Field              | Type            | Null    | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| user_name   | varchar(25)   | YES  |      | NULL    |       |
+| password      | varchar(25)   | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
